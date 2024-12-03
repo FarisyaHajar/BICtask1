@@ -1,0 +1,98 @@
+Question Chapter 4
+
+Choose 1 of product in group project (if kerepek, select kerepek bawang product)
+
+a) Generate coding for case study (kerepek bawang ) with fulfill JQUERY core concept (syntax, DOM manipulation, css styling, event handling).
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kerepek Bawang</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Kerepek Bawang</h1>
+    <button id="changeColor">Change Title Color</button>
+    <ul id="kerepekList">
+        <li>Kerepek Bawang Pedas</li>
+        <li>Kerepek Bawang Cheese</li>
+        <li>Kerepek Bawang Original</li>
+    </ul>
+    <button id="highlightItems">Highlight Items</button>
+
+    <script>
+        // Event handling and CSS styling
+        $("#changeColor").click(function () {
+            $("#title").css("color", "blue");
+        });
+
+        // DOM manipulation
+        $("#highlightItems").click(function () {
+            $("#kerepekList li").addClass("highlight");
+        });
+    </script>
+</body>
+</html>
+
+
+b) Generate coding for case study (kerepek bawang ) with fulfill JSON DATA TYPES (DATA TYPES:string, numbers, booleans, null, arrays, objects).
+
+const kerepekBawang = {
+    name: "Kerepek Bawang",
+    price: 12.5,
+    inStock: true,
+    flavors: ["Pedas", "Cheese", "Original"],
+    details: null
+};
+
+console.log(kerepekBawang.name); // String
+console.log(kerepekBawang.price); // Number
+console.log(kerepekBawang.inStock); // Boolean
+console.log(kerepekBawang.details); // Null
+console.log(kerepekBawang.flavors); // Array
+
+c) Generate coding for case study (kerepek bawang ) with fulfill JSON DATASTRUCTURE (arrays, objects, nested structures)
+
+const kerepekProducts = {
+    category: "Snacks",
+    products: [
+        {
+            name: "Kerepek Bawang Pedas",
+            price: 12.5,
+            inStock: true
+        },
+        {
+            name: "Kerepek Bawang Cheese",
+            price: 14.0,
+            inStock: false
+        }
+    ]
+};
+
+// Accessing nested structures
+console.log(kerepekProducts.products[0].name); // Output: Kerepek Bawang Pedas
+console.log(kerepekProducts.products[1].inStock); // Output: false
+
+
+d) Generate coding for case study (kerepek bawang ) with fulfill JSON pasring, stringification
+
+const kerepekJSON = '{"name": "Kerepek Bawang", "price": 12.5, "inStock": true}';
+
+// Parsing JSON
+const kerepekObject = JSON.parse(kerepekJSON);
+console.log(kerepekObject.name); // Output: Kerepek Bawang
+
+// Stringifying Object
+const newKerepek = {
+    name: "Kerepek Bawang Cheese",
+    price: 14.0,
+    inStock: false
+};
+const newKerepekJSON = JSON.stringify(newKerepek);
+console.log(newKerepekJSON);
+// Output: {"name":"Kerepek Bawang Cheese","price":14,"inStock":false}
